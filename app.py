@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 
 # Function to fetch movie posters
 def fetch_poster(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=29704a4bf8366980a1aa2001dbb33a04&language=en-US".format(movie_id)
+    url = "api".format(movie_id)
     data = rq.get(url)
     data = data.json()
     poster_path = data['poster_path']
